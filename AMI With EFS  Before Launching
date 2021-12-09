@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo su
+apt-get update -y
+apt-get install apache2 -y
+apt-get install awscli -y
+apt-get install nfs-common -y
+
+<Use Your Own Link AMI>:
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-03e704f011bcc7d88.efs.us-east-1.amazonaws.com:/ /var/www/html
